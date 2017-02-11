@@ -1,0 +1,83 @@
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="content-language" content="en" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Alberto Cerqueira" />
+        <meta name="reply-to" content="alberto.cerqueira1990@gmail.com" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta name="keywords" content="developer, softwave, engineer, java, erlang, javascript, html5, css3, php, android" />
+		<meta name="description" content="Alberto Cerqueira" />
+	    <!-- iOS web-app metas : hides Safari UI Components and Changes Status Bar Appearance -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		
+		<link rel="shortcut icon" href="../img/favicon.png" />
+		
+		<title>Alberto Cerqueira · Locations</title>
+	</head>
+	
+	<body id="map">
+		<script type="text/javascript" src="js/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/gmaps.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+		
+		<script>
+			var map = new GMaps({
+				div: '#map',
+				lat: -15.7942287,
+				lng: -47.882165799999996,
+				zoom: 4
+			});
+			
+			map.addMarker({
+				lat: -23.5505199,
+				lng: -46.63330940000003,
+				title: 'S\u00e3o Paulo',
+				click: (function(e) {
+				    // alert('you clicked in this marker');
+				}), 
+				infoWindow: {
+					content: '<p>S\u00e3o Paulo</p>'
+				}
+			});
+			
+			map.addMarker({
+				lat: -23.6818396,
+				lng: -46.62096700000001,
+				title: 'Diadema',
+				click: (function(e) {
+				    // alert('you clicked in this marker');
+				}), 
+				infoWindow: {
+					content: '<p>Diadema</p>'
+				}
+			});
+			
+			map.addMarker({
+				lat: -23.6898429,
+				lng: -46.564848100000006,
+				title: 'S\u00e3o Bernardo do Campo',
+				click: (function(e) {
+				    // alert('you clicked in this marker');
+				}), 
+				infoWindow: {
+					content: '<p>S\u00e3o Bernardo do Campo</p>'
+				}
+			});
+			
+			map.addMarker({
+				lat: -23.6742228,
+				lng: -46.54360029999998,
+				title: 'Santo Andr\u00e9',
+				click: (function(e) {
+				    // alert('you clicked in this marker');
+				}), 
+				infoWindow: {
+					content: '<p>Santo Andr\u00e9</p>'
+				}
+			});
+		</script>
+	</body>
+</html>
