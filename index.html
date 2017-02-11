@@ -14,9 +14,12 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		
-		<link rel="shortcut icon" href="http://jamigibbs.com/public/favicon.png">
+		<link rel="shortcut icon" href="http://jamigibbs.com/public/favicon.png" />
 		
-		<link rel="stylesheet" type="text/css" media="screen" href="css/styles.css">
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		
+		<link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
 		
 		<title>Alberto Cerqueira · Developer from São Paulo</title>
 	</head>
@@ -123,26 +126,32 @@
 	
 			<div class="large-2 large-offset-1 columns social">
 				<ul>
-					<li>
+					<li id="github">
 						<a href="https://github.com/albertocerqueira"><i class="fa fa-github"></i></a>
 					</li>
-					<li>
+					<li id="linkedin">
 						<a href="https://linkedin.com/in/albertocerqueira"><i class="fa fa-linkedin"></i></a>
 					</li>
-					<li>
+					<li id="medium">
 						<a href="https://medium.com/@albertocerqueira"><i class="fa fa-medium"></i></a>
 					</li>
-					<li>
+					<li id="email">
 						<a href="mailto:alberto.cerqueira1990@gmail.com"><i class="fa fa-envelope"></i></a>
 					</li>
-					<li>
+					<li id="stackoverflow">
 						<a href="http://stackoverflow.com/users/5004526/alberto-cerqueira"><i class="fa fa-stack-overflow"></i></a>
 					</li>
-					<li>
+					<li id="whatsapp">
 						<a href="tel:+5511959827811" title="+55 11 95982-7811"><i class="fa fa-whatsapp"></i></a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</body>
+	
+	<script type="text/javascript">
+		if (!isMobile.any()) {
+			$('#whatsapp').hide();
+		}
+	</script>
 </html>
