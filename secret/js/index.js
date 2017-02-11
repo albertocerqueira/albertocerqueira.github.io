@@ -15,8 +15,8 @@ function isBlank(value) {
 
 $('.spanColor').height(h + 23);
 
-$('#go-albertocerqueira').on('click', function() {
-	document.location = 'https://albertocerqueira.github.io';
+$('#remember').on('click', function() {
+	$('#remember').text('your most used password');
 });
 
 password.on('focus', function() {
