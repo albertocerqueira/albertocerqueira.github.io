@@ -33,7 +33,7 @@
 		<script type="text/javascript" src="js/gmaps.js"></script>
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaM8OKLkK59JDg3lBy3wZY98oVU0mG3LY"></script>
 		
-		<script>
+		<script type="text/javascript">
 			var map = new GMaps({
 				div: '#map',
 				lat: -15.7942287,
@@ -41,53 +41,65 @@
 				zoom: 4
 			});
 			
-			map.addMarker({
-				lat: -23.5505199,
-				lng: -46.63330940000003,
-				title: 'S\u00e3o Paulo',
-				click: (function(e) {
-				    // alert('you clicked in this marker');
-				}), 
-				infoWindow: {
-					content: '<p>S\u00e3o Paulo</p>'
-				}
-			});
-			
-			map.addMarker({
-				lat: -23.6818396,
-				lng: -46.62096700000001,
-				title: 'Diadema',
-				click: (function(e) {
-				    // alert('you clicked in this marker');
-				}), 
-				infoWindow: {
+			var locations = [
+				{
+					lat: -23.5505199, 
+					lng: -46.63330940000003, 
+					title: 'S\u00e3o Paulo - SP - Brazil', 
+					content: '<p>S\u00e3o Paulo - SP - Brazil</p>'
+				}, {
+					lat: -23.6818396, 
+					lng: -46.62096700000001, 
+					title: 'Diadema', 
 					content: '<p>Diadema</p>'
-				}
-			});
-			
-			map.addMarker({
-				lat: -23.6898429,
-				lng: -46.564848100000006,
-				title: 'S\u00e3o Bernardo do Campo',
-				click: (function(e) {
-				    // alert('you clicked in this marker');
-				}), 
-				infoWindow: {
+				}, {
+					lat: -23.6898429, 
+					lng: -46.564848100000006, 
+					title: 'S\u00e3o Bernardo do Campo', 
 					content: '<p>S\u00e3o Bernardo do Campo</p>'
-				}
-			});
-			
-			map.addMarker({
-				lat: -23.6742228,
-				lng: -46.54360029999998,
-				title: 'Santo Andr\u00e9',
-				click: (function(e) {
-				    // alert('you clicked in this marker');
-				}), 
-				infoWindow: {
+				}, {
+					lat: -23.6742228, 
+					lng: -46.54360029999998, 
+					title: 'Santo Andr\u00e9', 
 					content: '<p>Santo Andr\u00e9</p>'
+				}, {
+					lat: -23.6233625, 
+					lng: -46.55524330000003, 
+					title: 'S\u00e3o Caetano do Sul', 
+					content: '<p>S\u00e3o Caetano do Sul</p>'
+				}, {
+					lat: -23.668163, 
+					lng: -46.46170859999995, 
+					title: 'Mau\u00e1', 
+					content: '<p>Mau\u00e1</p>'
+				}, {
+					lat: -23.776955, 
+					lng: -46.301333, 
+					title: 'Paranapiacaba', 
+					content: '<p>Paranapiacaba</p>'
+				}, {
+					lat: -23.5307554, 
+					lng: -47.13539979999996, 
+					title: 'S\u00e3o Roque', 
+					content: '<p>S\u00e3o Roque</p>'
 				}
-			});
+			];
+			
+			for (var i = 0, l = locations.length; i < l; i++) {
+				var place = locations[i];
+				
+				map.addMarker({
+					lat: place.lat,
+					lng: place.lng,
+					title: place.title,
+					click: (function(e) {
+					    // alert('you clicked in this marker');
+					}), 
+					infoWindow: {
+						content: place.content
+					}
+				});
+			}
 		</script>
 	</body>
 </html>
